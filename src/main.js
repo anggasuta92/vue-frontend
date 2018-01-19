@@ -19,5 +19,6 @@ new Vue({
     headers: {
       Authorization: 'Basic YXBpOnBhc3N3b3Jk'
     }
-  }
+  },
+  serverURL: 'http://127.0.0.1:8000'
 })

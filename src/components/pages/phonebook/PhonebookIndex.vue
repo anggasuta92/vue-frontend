@@ -75,7 +75,7 @@ export default {
     }
   },
   created: function () {
-    this.$http.get('http://localhost:8000/api/phonebook')
+    this.$http.get(this.serverURL + '/api/phonebook')
       .then((response) => {
         this.results = response.body.data
         this.current_page = response.body.current_page
@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     searchData: function (event) {
-      this.$http.get('http://localhost:8000/api/phonebook/' + this.txtSearch)
+      this.$http.get(this.serverURL + '/api/phonebook/' + this.txtSearch)
         .then((response) => {
           this.results = response.body.data
           this.current_page = response.body.current_page
